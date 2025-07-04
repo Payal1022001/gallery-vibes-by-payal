@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>✨ Payal Gallery — Dreamy Emotions in Frames</title>
+
+  <!-- Fonts & Libraries -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="libs/aos/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- 🌌 Background Particles -->
+  <div id="particles-js"></div>
+
+  <!-- 🎛 Utility Buttons -->
+  <div class="utility-buttons">
+    <button id="theme-toggle" title="Toggle Theme">🌙</button>
+    <button id="music-toggle" title="Toggle Music">🎵</button>
+    <select id="color-picker" title="Choose Theme">
+      <option value="default">🎨</option>
+      <option value="pink">Pink</option>
+      <option value="blue">Blue</option>
+      <option value="purple">Purple</option>
+    </select>
+  </div>
+
+  <!-- 🧭 Header -->
+  <header class="header">
+    <div class="logo">💖 Payal’s Dream Gallery</div>
+    <nav class="nav">
+      <button id="nav-toggle" class="nav-toggle">☰</button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="#intro">Home</a></li>
+        <li><a href="#slider">Slider</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ✨ Intro Section -->
+  <!-- <section id="intro" class="intro section" data-aos="fade-down">
+    <h1><span class="highlight">Gallery of Emotions</span></h1>
+    <p class="subtitle">A magical world where memories glow, float, and flow with love 💫</p>
+  </section> -->
+
+  <!-- 🎞️ Slider Section -->
+  <section id="slider" class="slider-section section" data-aos="zoom-in">
+    <div class="slider-container">
+      <div class="slider-wrapper">
+        <img class="slide" src="assets/images/slider1.jpg" alt="Slide 1">
+        <img class="slide" src="assets/images/slider2.jpg" alt="Slide 2">
+        <img class="slide" src="assets/images/slider3.jpg" alt="Slide 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- 🌠 Parallax Section -->
+  <section class="parallax" style="background-image: url('assets/images/parallax1.jpg');">
+    <div class="parallax-content" data-aos="fade-up">Moments that sparkle forever ✨</div>
+  </section>
+
+  <!-- 🔒 Password Lock -->
+  <section id="password-lock" class="section">
+    <h2 class="section-title">🔒 Enter Password to View Gallery</h2>
+    <input type="password" id="gallery-pass" placeholder="Enter password" />
+    <button id="unlock-gallery">Unlock</button>
+    <p id="pass-msg" style="color: red; margin-top: 10px;"></p>
+  </section>
+
+  <!-- 🖼️ Gallery Section (Hidden until unlocked) -->
+  <div id="gallery-container" style="display: none;">
+    <section id="gallery" class="gallery section">
+      <h2 class="section-title" data-aos="fade-up">Dreamy Collection</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item" data-aos="fade-up"><img src="assets/images/01.jpg" alt="Gallery 1"></div>
+        <div class="gallery-item" data-aos="zoom-in"><img src="assets/images/02.jpg" alt="Gallery 2"></div>
+        <div class="gallery-item" data-aos="fade-right"><img src="assets/images/03.jpg" alt="Gallery 3"></div>
+        <div class="gallery-item" data-aos="fade-left"><img src="assets/images/04.jpg" alt="Gallery 4"></div>
+        <div class="gallery-item" data-aos="zoom-in"><img src="assets/images/05.jpg" alt="Gallery 5"></div>
+        <div class="gallery-item" data-aos="fade-up"><img src="assets/images/06.jpg" alt="Gallery 6"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 🔍 Image Modal (Zoom Lightbox) -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-img">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img" alt="Preview Image">
+  </div>
+
+  <!-- 💌 Contact Form -->
+  <section id="contact" class="section contact-section" data-aos="fade-up">
+    <h2 class="section-title">Get in Touch 💌</h2>
+    <form class="contact-form" action="mailto:payalwandhare9@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message ✨</button>
+    </form>
+  </section>
+
+  <!-- ⬆️ Scroll to Top -->
+  <button id="scrollTopBtn" title="Scroll to Top">↑</button>
+
+  <!-- 👣 Footer -->
+  <footer id="footer" class="footer">
+    <p>Made with ❤️ by Payal</p>
+    <div class="footer-links">
+      <a href="#" target="_blank">GitHub</a>
+      <a href="mailto:payalwandhare9@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/payal-wandhare-8a6559179" target="_blank">LinkedIn</a>
+    </div>
+    <small>© 2025 Payal Gallery. All rights reserved.</small>
+  </footer>
+
+  <!-- 🎇 Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script src="libs/aos/aos.js"></script>
+  <script>
+    // Mobile nav toggle
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+      document.getElementById('nav-menu').classList.toggle('active');
+    });
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>
